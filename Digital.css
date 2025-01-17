@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css? family=Poppins: 200, 300, 400, 500, 600, 700, 800, 900& display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: #2f363e; */
+    background: #222222;
+    /* background: linear-gradient(to bottom, #2987e4 50%, #16191e 50%); */
+}
+#time{
+    display: flex;
+    gap: 40px;
+    color: #fff;
+}
+#time .circle{
+    position: relative;
+    /* background-color: black; */
+    /* border-radius: 50%; */
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+#time .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #2f363e;
+    stroke-width: 5;
+    /* stroke-linecap: round; */
+    transform: translate(5px, 5px);
+}
+#time .circle svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    /* stroke-dashoffset: 240; */
+}
+#time div{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+#time .ap{
+    position: relative;
+    font-size: 1em;
+    transform: translateX(-20px);
+
+}
+#time .dots{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    z-index: 10;
+}
+.dots::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+#time span{
+    position: absolute;
+    font-size: 0.35em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+}
+.btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    /* border: 2px solid white; */
+    background: #0065ca;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 85%;
+    left: 50%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.btn:hover{
+    background-color: #2987e4;
+    font-size: 25.3px;
+    transition: 0.1 ease ;
+}
